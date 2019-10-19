@@ -11,5 +11,10 @@ namespace jeverett.Models
         public DbSet<Message> Messages {get;set;}
         public DbSet<Comment> Comments {get;set;}
         public DbSet<Like> Likes {get;set;}
+
+
+
+
+        
     }
 }

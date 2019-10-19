@@ -1,47 +1,25 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] | Joshua Everett</title>
-<link rel="shortcut icon" type="image/png" href="/iassets/je-icon2.ico" />
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-              crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
-    </environment>
-    
-    <link rel="stylesheet" href="~/css/site.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Economica:700&display=swap" rel="stylesheet">
-    <script>
-    $(document).ready(function() {
-           $('form').submit(function(){
-            var api_key = '3faab80a8f6dbf901f8112cc8f6e869d';
-            var city = $('input:text[name=city]').val();
-            $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=imperial&appid=' + api_key, function(res){
-				var html_str = '';
-				//html_str += "<img src=images/ + res['weather'][0]['icon'] + >";
-                html_str += "<p> In " + res['name'] + " it's " + res['main']['temp'] + "&#8457;";
-                html_str += "<br>With "+ res['weather'][0]['description'] + " around.</p>";
-                $('#weather').html(html_str);
-            }, 'jsonp');
-            return false;
-           })
-        });
-</script>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>@ViewData["Title"] | Joshua Everett</title>
+  <link rel="shortcut icon" type="image/png" href="/iassets/je-icon.png" />
 
+  <!-- MATERIAL CSS  -->
+  <link href="/css/site.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+   <link href="https://fonts.googleapis.com/css?family=Audiowide|Cinzel|Economica:700|Liu+Jian+Mao+Cao|Rock+Salt&display=swap" rel="stylesheet"> 
 
 <meta name="description" content="Computer Software Engineering graduate with intensive training in software development. Well-versed in Python, C#/.Net, JavaScript, MongoDB, Django and MySQL. Military veteran with strong ability to manage projects from concept to completion ensuring on-time, on-budget, and on-target results. Equally adept at working with teams and individually with minimal supervision.  " />
 <meta name="keywords" content="AI, artifical Intelligence, software engineering, software, developer, full-stack, fullstack, python, ajax, java, mean, C#, maryland, lexington park, PAX, 919-588-0090" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150260289-2"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150260289-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -49,51 +27,28 @@
 
   gtag('config', 'UA-150260289-2');
 </script>
+ -->
+
 
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-  <a class="navbar-brand nav_logo" href="Home">Joshua Everett</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      
-      <li class="nav-item">
-       
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Resume">My Resume</a>
-      </li>
-      
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Portfolio
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="http://josheverett.info">ARES: AI Chatbot</a>
-          <a class="dropdown-item" href="http://nerdgnome.com/">nerdGnome: Application Tracking Site</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="Portfolio">All Projects</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Contact">Contact Me</a>
-      </li>
-
+    
+<div id="menu">
+    <!--MATERIAL NAV-->
+  <nav class="navbar-fixed" >
+    <div class="nav-wrapper #455a64 #263238 blue-grey darken-4">
+    <img src="/iassets/eagle2.png" alt="Joshua Everett" style="margin-left: 8px; width:70px; margin-top:11px;">
+      <span class="nav-name">Joshua Everett</span>
+      <ul class="right hide-on-med-and-down">
+      <li><a class="white-text" href="#resume">resume</a></li>
+      <li><a class="white-text" href="#projects">projects</a></li>
+      <li><a class="white-text" href="#contact">contact</a></li>
     </ul>
-    <div id="weather">
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" name='city' id='city' type='text' placeholder="Enter Your Zip Code" aria-label="city">
-      <button class="btn btn-outline-success my-2 my-sm-0 button-green" type="submit">Get Weather</button>
-    </form>
-    </div>
-  </div>
-</nav>
-    </header>
+
+  </nav>
+
+</div>
+  <!--END MATERIAL NAV-->
   
       <div class="container">
       <main role="main" class="pb-3">
@@ -101,34 +56,70 @@
       </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container footer_title">
-        &copy; <a href="http://joshuaeverett22.com/Contact">joshuaeverett22.com</a>
-        v.1.8.0
-        
-        <image class="nav_gnome float-right" src="/iassets/je-icon.png">
-        </div>
-    </footer>
+    
 
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    </environment>
+    <!--MATERIAL FOOTER-->
+<footer class="page-footer light-green  black-text">
+    <div class="container">
+      <div class="row">
+        
+        <!--COL 1--> 
+        <div class="card-panel grey lighten-5 z-depth-1 col s6">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="iassets/me.jpeg" alt="" class="circle responsive-img" alt="Joshua Everett"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+
+              <ul class="collection">
+                <li class="collection-item"><i class="material-icons">phone</i>  (240) 233-4112‬</li>
+                <li class="collection-item"><i class="material-icons">send</i>  joshuaeverett22@gmail.com</li>
+              </ul>
+
+            </div>  
+      </div></div>
+
+             <!--COL 2--> 
+        <div class="card-panel grey lighten-5 z-depth-1 col s6">
+          <div class="row valign-wrapper">
+
+            <div class="col s12">
+              <ul class="collection">
+                <li class="collection-item foot-ico"><img src="/iassets/icons/linkedin.png" alt="LinkedIn"><a href="https://www.linkedin.com/in/joshuaeverett22/">  view my linkedin profile‬</a></li>
+
+                <li class="collection-item foot-ico"><img src="/iassets/icons/github.png" alt="Github"><a href="https://github.com/everett-j">  view my github‬</a></li>
+
+
+              </ul>
+            </div>
+          
+      
+        
+        
+      </div>
+    </div>
+    </div>
+    <div class=" cinzel-font">
+     
+      © Joshua Everett
+      
+    </div>
+  </footer>
+
+    <!--END MATERIAL FOOTER-->
+
+  
     <environment exclude="Development">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
-        </script>
+        
+          <!-- MATERIAL JavaScript -->
+<!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/js/materialize.js"></script>
+  <script src="/js/materialize.min.js"></script>
+  <script src="/js/init.js"></script>
+           <!-- Compiled and minified JavaScript -->
+
     </environment>
-    <script src="~/js/site.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
 </body>

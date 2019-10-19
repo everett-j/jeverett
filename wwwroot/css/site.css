@@ -1,527 +1,67 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿.headline-bg{
+    background-color: white;
+    opacity: 0.6;
+    font-size: 44px;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-body, html {
+h6 img{
+    width: 48px;
+    margin: 10px;
+    
+}
 
-    min-height: 100%;
-    margin: 0;
-    font: 400 15px/1.8 "Lato", sans-serif;
-    color: #777;
-  }
+.h7 img{
+    width: 48px;
+    margin: -50px;
+    padding: 5px;
+}
 
-@media (min-width: 768px) {
-  html {
+.foot-ico img{
+    width: 22px;
+    margin: 1px;
+}
+
+.phone{
+    margin: 1px;
+}
+
+.nav-name{
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+}
+
+.cinzel-font{
+    
+    font-family: 'Cinzel', serif;
+}
+
+.qual-font{
     font-size: 16px;
-    min-height: 100%;
+    font-family: 'Audiowide', cursive;
+    color: darkgreen;
+}
+
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: black; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
   }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-
-
-
-
-.footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
-  font-family: 'Economica', sans-serif;
-  font-size: 22px;
-}
-
-
-
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  position: relative;
-  opacity: 0.65;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-.bgimg-1 {
-  background-image: url("/images/bg2.jpg");
-  min-height: 100%;
-}
-
-.bgimg-2 {
-  background-image: url("/images/bg6.jpg");
-  min-height: 400px;
-}
-
-
-.bgimg-3 {
-  background-image: url("/images/bg8.jpg");
-  min-height: 400px;
-}
-
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-
-h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #111;
-}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
   }
-}
 
-.card {
-  padding-top: 20px;
-  margin: 10px 0 20px 0;
-  background-color: rgba(214, 224, 226, 0.2);
-  border-top-width: 0;
-  border-bottom-width: 2px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.card .card-heading {
-  padding: 0 20px;
-  margin: 0;
-}
-
-.card .card-heading.simple {
-  font-size: 30px;
-  font-weight: 300;
-  color: #777;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.card .card-heading.image img {
-  display: inline-block;
-  width: 55px;
-  height: 55px;
-  margin-right: 15px;
-  vertical-align: top;
-  border: 0;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-
-.card .card-heading.image .card-heading-header {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.card .card-heading.image .card-heading-header h3 {
-  margin: 0;
-  font-size: 20px;
-  line-height: 16px;
-  color: #262626;
-}
-
-.card .card-heading.image .card-heading-header span {
-  font-size: 20px;
-  color: #999999;
-}
-
-.card .card-body {
-  padding: 0 20px;
-  margin-top: 20px;
-}
-
-.card .card-media {
-  padding: 0 20px;
-  margin: 0 -14px;
-}
-
-.card .card-media img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.card .card-actions {
-  min-height: 30px;
-  padding: 0 20px 20px 20px;
-  margin: 20px 0 0 0;
-}
-
-.card .card-comments {
-padding: 20px;
-font-size: 20px;
-  margin: 0;
-  background-color: #f8f8f8;
-}
-
-.card .card-comments .comments-collapse-toggle {
-  padding: 0;
-  margin: 0 20px 12px 20px;
-}
-
-.card .card-comments .comments-collapse-toggle a,
-.card .card-comments .comments-collapse-toggle span {
-  padding-right: 5px;
-  overflow: hidden;
-  font-size: 20px;
-  color: #999;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.card-comments .media-heading {
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.card.people {
-  position: relative;
-  display: inline-block;
-  width: 170px;
-  height: 300px;
-  padding-top: 0;
-  margin-left: 20px;
-  overflow: hidden;
-  vertical-align: top;
-}
-
-.card.people:first-child {
-  margin-left: 0;
-}
-
-.card.people .card-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  width: 170px;
-  height: 150px;
-  background-color: #ffffff;
-}
-
-.card.people .card-top.green {
-  background-color: #53a93f;
-}
-
-.card.people .card-top.blue {
-  background-color: #427fed;
-}
-
-.card.people .card-info {
-  position: absolute;
-  top: 150px;
-  display: inline-block;
-  width: 100%;
-  height: 101px;
-  overflow: hidden;
-  background: #ffffff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.card.people .card-info .title {
-  display: block;
-  margin: 8px 14px 0 14px;
-  overflow: hidden;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 18px;
-  color: #404040;
-}
-
-.card.people .card-info .desc {
-  display: block;
-  margin: 8px 14px 0 14px;
-  overflow: hidden;
-  font-size: 18px;
-  line-height: 16px;
-  color: #737373;
-  text-overflow: ellipsis;
-}
-
-.card.people .card-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: inline-block;
-  width: 100%;
-  padding: 10px 20px;
-  line-height: 29px;
-  text-align: center;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.card.hovercard {
-  position: relative;
-  padding-top: 0;
-  overflow: hidden;
-  text-align: center;
-  background-color: rgba(214, 224, 226, 0.75);
-}
-
-.card.hovercard .cardheader {
-  background-color: #222629;
-  background-size: cover;
-  height: 135px;
-}
-
-.card.hovercard .avatar {
-  position: relative;
-  top: -50px;
-  margin-bottom: -50px;
-}
-
-.card.hovercard .avatar img {
-  width: 150px;
-  height: 150px;
-  max-width: 150px;
-  max-height: 150px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  border: 5px solid rgba(255,255,255,0.5);
-}
-
-.card.hovercard .info {
-  padding: 4px 8px 10px;
-}
-
-.card.hovercard .info .title {
-  margin-bottom: 4px;
-  font-size: 30px;
-  line-height: 1;
-  color: #262626;
-  vertical-align: middle;
-}
-
-.card.hovercard .info .desc {
-  overflow: hidden;
-  font-size: 18px;
-  line-height: 20px;
-  color: #4a4646;
-  text-overflow: ellipsis;
-}
-
-.card.hovercard .bottom {
-  padding: 0 20px;
-  margin-bottom: 17px;
-}
-
-.card.hovercard .bottom-black {
-  padding: 4px 20px;
-margin-bottom: 17px;
-background-color: #86C232;
-}
-
-.icon_hold {
-  width: 40px;
-  height: 40px;
-  background-color: #61892f;
-  border-radius: 50%;
-  margin: 5px;
-  text-align: center;
-}
-
-.icon_hold2 {
-  width: 40px;
-  height: 40px;
-  background-color: #61892f;
-  border-radius: 50%;
-  margin: 5px;
-  text-align: center;
-}
-
-.icon_hold3 {
-  width: 40px;
-  height: 40px;
-  background-color: #61892f;
-  border-radius: 50%;
-  margin: 5px;
-  text-align: center;
-}
-
-.icon_hold4 {
-  width: 40px;
-  height: 40px;
-  background-color: #61892f;
-  border-radius: 50%;
-  margin: 5px;
-  text-align: center;
-}
-
-.icon_hold img {
-  width: 32px;
-  margin-top: 4px;
-  vertical-align: middle;
-  border-style: none;
-  
-}
-
-.icon_hold2 img {
-  width: 32px;
-  margin-top: 4px;
-  vertical-align: middle;
-  border-style: none;
-  
-}
-
-.icon_hold3 img {
-  width: 32px;
-  margin-top: 4px;
-  vertical-align: middle;
-  border-style: none;
-  
-}
-
-.icon_hold4 img {
-  width: 32px;
-  margin-top: 4px;
-  vertical-align: middle;
-  border-style: none;
-  
-}
-
-.nav_gnome{
-
-  width: 50px;
-}
-
-.button-green:hover{
-  background-color: #86C232 ;
-}
-
-.nav_logo{
-  font-family: 'Economica', sans-serif;
-  font-size: 27px;
-}
-
-#weather{
-  color: #86C232 ;
-}
-
-.resume-header{
-  background-color: #61892F;
-  color: white;
-}
-
-.resume_linkedin {
-  width: 40px;
-  height: 40px;
-  background-color: #61892f;
-  border-radius: 50%;
-  margin: 5px;
-  text-align: center;
-}
-
-.resume_github {
-  width: 40px;
-  height: 40px;
-  background-color: #61892f;
-  border-radius: 50%;
-  margin: 5px;
-  text-align: center;
-}
-
-.resume_email {
-  width: 40px;
-  height: 40px;
-  background-color: #61892f;
-  border-radius: 50%;
-  margin: 5px;
-  text-align: center;
-}
-
-.resume_phone {
-  width: 40px;
-  height: 40px;
-  background-color: #61892f;
-  border-radius: 50%;
-  margin: 5px;
-  text-align: center;
-}
-
-.resume_linkedin img {
-  width: 32px;
-  margin-top: 4px;
-  vertical-align: middle;
-  border-style: none;
-}
-
-
-.resume_github img {
-  width: 32px;
-  margin-top: 4px;
-  vertical-align: middle;
-  border-style: none;
-}
-
-
-.resume_email img {
-  width: 32px;
-  margin-top: 4px;
-  vertical-align: middle;
-  border-style: none;
-}
-
-
-.resume_phone img {
-  width: 32px;
-  margin-top: 4px;
-  vertical-align: middle;
-  border-style: none;
-}
-
-.port-image{
-  width: 100%;
-}
+  .wordart img{
+      width: 350px;
+  }
